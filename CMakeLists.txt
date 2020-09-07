@@ -2,7 +2,13 @@ cmake_minimum_required(VERSION 2.8)
 
 project(tiny-process-library)
 
-add_library(tiny-process-library process.cpp)
+add_library(tiny-process-library STATIC)
+
+target_sources(
+  tiny-process-library
+  PRIVATE
+    process.cpp
+)
 
 if(PULCHER_PLATFORM STREQUAL "Win64")
   target_sources(tiny-process-library PRIVATE process_win.cpp)
