@@ -1,7 +1,7 @@
 #include "process.hpp"
 #include <windows.h>
 #include <cstring>
-#include <TlHelp32.h>
+#include <tlhelp32.h>
 #include <stdexcept>
 
 namespace TinyProcessLib {
